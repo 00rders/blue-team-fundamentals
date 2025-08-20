@@ -1,44 +1,57 @@
-### 🧠 Field Reference: SOC Roles
+# 🧠 SOC Roles – Field Reference
 
-> **Use this section as a quick-look reference while working cases, building detection rules, or studying for interviews.**
-
----
-
-#### 🎯 Role Breakdown
-
-| Role               | Primary Focus                              | Common Tools                                                       |
-|--------------------|---------------------------------------------|--------------------------------------------------------------------|
-| **Tier 1 Analyst** | Alert triage, log review, escalation        | SIEMs (Splunk, ELK), EDR (CrowdStrike), Ticketing (TheHive)        |
-| **Tier 2 Analyst** | In-depth investigation, incident handling   | PCAP tools (Wireshark), Threat Intel (VirusTotal, AbuseIPDB)       |
-| **Threat Hunter**  | Proactive threat search, hypothesis testing | EDR, Query tools (KQL, SPL), MITRE ATT&CK                           |
-| **Detection Eng.** | Rule creation, tuning, coverage mapping     | SIEM/EDR, Sigma rules, ATT&CK Navigator                            |
-| **SOC Lead**       | Workflow design, escalations, reporting     | Jira, Case management, Compliance tooling                          |
+A quick-access tactical sheet for understanding SOC team structure and responsibilities.
 
 ---
 
-#### 🧩 Kill Chain vs Roles
+## 📚 SOC Role Definitions
 
-| Kill Chain Phase        | Role Most Involved                   |
-|--------------------------|--------------------------------------|
-| Recon → Weaponization    | Threat Hunter, Detection Engineer    |
-| Delivery → Exploitation  | Tier 1/2 Analyst                     |
-| Installation → C2        | Tier 2 Analyst, Threat Hunter        |
-| Exfiltration             | Tier 2 Analyst, SOC Lead             |
-
----
-
-#### 🛠️ Tools Reference
-
-- **SIEMs**: Splunk, Elastic, Sentinel  
-- **EDR**: CrowdStrike, SentinelOne, Defender for Endpoint  
-- **Intel**: VirusTotal, GreyNoise, AbuseIPDB  
-- **Case Mgmt**: TheHive, Jira, MISP  
-- **Kill Chain Models**: MITRE ATT&CK, Cyber Kill Chain, Diamond Model  
+1. **Tier 1 Analyst** – Alert triage, initial investigation, escalate as needed  
+2. **Tier 2 Analyst** – Deeper log analysis, threat validation, incident scoping  
+3. **Threat Hunter** – Proactively hunts threats without alerts, uses hypothesis-driven methods  
+4. **Detection Engineer** – Develops detection rules, maps coverage to MITRE ATT&CK  
+5. **SOC Lead / Manager** – Oversees SOC operations, handles reporting, ensures SLA compliance  
 
 ---
 
-#### 🗣️ Interview Cheat Sheet
+## 💡 Analyst Tips
 
-- “As a Tier 1, I’d first validate the alert, check context in the SIEM, and escalate if needed.”
-- “A Threat Hunter differs by proactively searching without a trigger.”
-- “Detection Engineers map rules to ATT&CK to ensure coverage across all tactics.”
+- Tier 1 = **frontline**, handle high volume, focus on noise reduction  
+- Tier 2 = **context builder**, connect dots, ask “what else?”  
+- Threat Hunters should **build hypotheses** and test using real data  
+- Detection Engineers must balance **coverage vs noise**  
+- SOC Leads should maintain **communication pipelines** and incident quality  
+
+---
+
+## 🧰 Tools & Detection Coverage
+
+| Role               | Common Tools Used                                        |
+|--------------------|----------------------------------------------------------|
+| Tier 1 Analyst     | SIEM (Splunk/ELK), Ticketing (TheHive), MITRE ATT&CK     |
+| Tier 2 Analyst     | EDR, PCAP tools (Wireshark), Sandbox (ANY.RUN)           |
+| Threat Hunter      | KQL/SPL queries, EDR, Zeek, Sigma, ATT&CK Navigator      |
+| Detection Engineer | Sigma, Sysmon configs, Rule testing platforms            |
+| SOC Lead           | Dashboards, Reporting tools, Workflow diagrams           |
+
+---
+
+## 🧪 Practice Scenario Example
+
+**Scenario:**  
+An alert triggers on a suspicious PowerShell command execution.
+
+- **Tier 1:** Confirms alert, gathers context, escalates
+- **Tier 2:** Investigates scope, lateral movement, and parent-child process trees
+- **Threat Hunter:** Hunts for similar techniques across environment
+- **Detection Engineer:** Tunes alert, reduces false positives, maps to MITRE T1059
+- **SOC Lead:** Reviews incident timeline and reporting to stakeholders
+
+---
+
+## 🧭 Use Cases
+
+- Use this reference during **on-call rotations**  
+- Structure SOC playbooks around **who does what**  
+- Align responsibilities to tools during tabletop exercises  
+- Build detection rules and queries per role’s responsibilities  
