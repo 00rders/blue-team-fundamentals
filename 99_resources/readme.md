@@ -39,7 +39,7 @@ This page provides categorized quick-access links to useful blue team tools, doc
 
 ---
 
-## ⚔️ Offensive Security & Red Teaming
+## ⚔️ Offensive Security 
 
 * [Metasploit Unleashed](https://www.offsec.com/metasploit-unleashed/introduction/) – Free community resource to learn Metasploit  
 
