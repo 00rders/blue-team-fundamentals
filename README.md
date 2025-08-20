@@ -107,4 +107,4 @@
 
 ## 📦 Resources
 
-* [Universal Prompt](99_resources/universal_prompt.md)
+* [Universal Prompt](universal_prompt.md)
