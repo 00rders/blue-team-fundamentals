@@ -96,15 +96,9 @@
 * [EDR Tuning & Noise Reduction](07_detection_and_response/07_edr_tuning_noise_reduction.md)
 * [Detection Patterns Reference](07_detection_and_response/08_detection_patterns_reference.md)
 
-### 08 – Capstone Challenges
-
-* [Tempest](08_capstone_challenges/01_tempest.md)
-* [Boogeyman 1](08_capstone_challenges/02_boogeyman_1.md)
-* [Boogeyman 2](08_capstone_challenges/03_boogeyman_2.md)
-* [Boogeyman 3](08_capstone_challenges/04_boogeyman_3.md)
 
 ---
 
 ## 📦 Resources
-
+* [Index](99_resources/readme.md)
 * [Universal Prompt](universal_prompt.md)
