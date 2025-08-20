@@ -1,6 +1,6 @@
 # 🛡️ Blue Team Fundamentals
 
-> **Instruction:** Paste the contents of `99_resources/universal_prompt.md` into ChatGPT before working on any module below.
+> **Instruction:** Paste the contents of `universal_prompt.md` into ChatGPT before working on any module below.
 > Use each `.md` file as a scratchpad to take notes, ask questions, and summarize your understanding.
 
 ---
