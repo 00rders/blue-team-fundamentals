@@ -108,4 +108,3 @@
 ## 📦 Resources
 
 * [Universal Prompt](99_resources/universal_prompt.md)
-* [Tools and Cheatsheets](99_resources/tools_and_cheatsheets.md)
