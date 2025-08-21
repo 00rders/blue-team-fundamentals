@@ -23,7 +23,8 @@ This page provides categorized quick-access links to useful blue team tools, doc
 
 ## 🧠 Threat Intelligence & Detection Engineering
 
-* [MITRE ATT&CK](https://attack.mitre.org/) – Adversary Tactics and Techniques knowledge base  
+* [MITRE ATT&CK](https://attack.mitre.org/) – Adversary Tactics and Techniques knowledge base
+* [MITRE ATT&CK SIMPLIFIED](https://mitre-attack.github.io/attack-navigator//#layerURL=https%3A%2F%2Fattack.mitre.org%2Fgroups%2FG0008%2FG0008-enterprise-layer.json)
 * [Rapid7 InsightIDR APT Mapping](https://docs.rapid7.com/insightidr/apt-groups/#apt27) – Real-world APT mappings  
 * [SOC Prime TDM](https://tdm.socprime.com/) – Threat Detection Marketplace  
 * [Kaspersky Threat Encyclopedia](https://www.kaspersky.com/resource-center/threats) – Malware, ransomware, and threat reference hub  
