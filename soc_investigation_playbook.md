@@ -108,6 +108,7 @@ cat /var/log/syslog
 | `/var/log/secure`             | (RHEL/CentOS) Authentication and security-related events (like auth.log) | Same use cases as `/var/log/auth.log` for Red Hat-based systems               |
 
 📌 **Tip for SOC triage:** Focus on `auth.log`, `syslog`, firewall logs, and service-specific logs first. These often contain the earliest indicators of compromise.
+📌 **Tip:** Use `tail -f /var/log/<file>` to watch logs live in real-time.
 
 ---
 
