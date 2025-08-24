@@ -91,6 +91,24 @@ cat /var/log/syslog
 
 **MITRE ATT\&CK:** T1110.001, T1078, T1086, T1003, T1562.002
 
+### 📑 Key Linux Log Files (Ubuntu/Debian)
+
+| File/Directory                | Purpose                                                                 |
+|-------------------------------|-------------------------------------------------------------------------|
+| `/var/log/syslog`             | General system messages, services, kernel events                        |
+| `/var/log/auth.log`           | Authentication events: logins, sudo usage, SSH attempts                 |
+| `/var/log/kern.log`           | Kernel-level messages                                                   |
+| `/var/log/dmesg`              | Boot and hardware-related messages                                      |
+| `/var/log/faillog`            | Failed login attempts summary                                           |
+| `/var/log/ufw.log`            | UFW firewall activity (blocked/allowed connections)                     |
+| `/var/log/fail2ban.log`       | Logs from fail2ban (brute-force protection)                             |
+| `/var/log/apache2/access.log` | Apache web server requests (IP, method, URL, status)                     |
+| `/var/log/apache2/error.log`  | Apache web server errors, misconfigurations, crashes                     |
+| `/var/log/mysql/error.log`    | MySQL database errors and startup issues                                |
+| `/var/log/secure`             | (RHEL/CentOS) Authentication and security-related events (like auth.log) |
+
+📌 **Tip:** Use `tail -f /var/log/<file>` to watch logs live in real-time.
+
 ---
 
 ## 🧠 5. Persistence Checks
