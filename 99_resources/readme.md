@@ -11,7 +11,7 @@ This page provides categorized quick-access links to useful blue team tools, doc
 * [ANY.RUN](https://app.any.run/tasks/a66178de-7596-4a05-945d-704dbf6b3b90) – Interactive malware sandbox  
 * [MalShare](https://malshare.com/) – Free malware sample repository  
 * [Bazaar by abuse.ch](https://bazaar.abuse.ch/) – Malware sample intelligence and downloads
-* [Vim Editor Cheatsheet](https://vim.rtorr.com/)
+* [Vim Editor Cheatsheet](https://vim.rtorr.com/) - Vim editor command cheatsheet
 
 ---
 
