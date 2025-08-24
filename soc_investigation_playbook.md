@@ -91,23 +91,23 @@ cat /var/log/syslog
 
 **MITRE ATT\&CK:** T1110.001, T1078, T1086, T1003, T1562.002
 
-### 📑 Key Linux Log Files (Ubuntu/Debian)
+### 📑 Key Linux Log Files
 
-| File/Directory                | Purpose                                                                 |
-|-------------------------------|-------------------------------------------------------------------------|
-| `/var/log/syslog`             | General system messages, services, kernel events                        |
-| `/var/log/auth.log`           | Authentication events: logins, sudo usage, SSH attempts                 |
-| `/var/log/kern.log`           | Kernel-level messages                                                   |
-| `/var/log/dmesg`              | Boot and hardware-related messages                                      |
-| `/var/log/faillog`            | Failed login attempts summary                                           |
-| `/var/log/ufw.log`            | UFW firewall activity (blocked/allowed connections)                     |
-| `/var/log/fail2ban.log`       | Logs from fail2ban (brute-force protection)                             |
-| `/var/log/apache2/access.log` | Apache web server requests (IP, method, URL, status)                     |
-| `/var/log/apache2/error.log`  | Apache web server errors, misconfigurations, crashes                     |
-| `/var/log/mysql/error.log`    | MySQL database errors and startup issues                                |
-| `/var/log/secure`             | (RHEL/CentOS) Authentication and security-related events (like auth.log) |
+| File/Directory                | Purpose                                                                 | SOC Relevance                                                                 |
+|-------------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| `/var/log/syslog`             | General system messages, services, kernel events                        | Baseline system behavior, crash/error detection, suspicious service activity  |
+| `/var/log/auth.log`           | Authentication events: logins, sudo usage, SSH attempts                 | Detect brute force, privilege escalation, lateral movement                    |
+| `/var/log/kern.log`           | Kernel-level messages                                                   | Driver/rootkit issues, kernel exploits                                        |
+| `/var/log/dmesg`              | Boot and hardware-related messages                                      | Look for persistence attempts via kernel modules or boot-time anomalies       |
+| `/var/log/faillog`            | Failed login attempts summary                                           | Brute-force attack tracking, account abuse                                    |
+| `/var/log/ufw.log`            | UFW firewall activity (blocked/allowed connections)                     | Detect port scans, blocked C2 traffic, unauthorized inbound/outbound          |
+| `/var/log/fail2ban.log`       | Logs from fail2ban (brute-force protection)                             | Validation of brute-force mitigation, source IPs for correlation              |
+| `/var/log/apache2/access.log` | Apache web server requests (IP, method, URL, status)                     | Identify web shells, LFI/RFI attempts, brute force on web apps                |
+| `/var/log/apache2/error.log`  | Apache web server errors, misconfigurations, crashes                     | Evidence of exploitation attempts (e.g., malformed requests causing errors)   |
+| `/var/log/mysql/error.log`    | MySQL database errors and startup issues                                | SQL injection detection, failed/abnormal DB access attempts                   |
+| `/var/log/secure`             | (RHEL/CentOS) Authentication and security-related events (like auth.log) | Same use cases as `/var/log/auth.log` for Red Hat-based systems               |
 
-📌 **Tip:** Use `tail -f /var/log/<file>` to watch logs live in real-time.
+📌 **Tip for SOC triage:** Focus on `auth.log`, `syslog`, firewall logs, and service-specific logs first. These often contain the earliest indicators of compromise.
 
 ---
 
