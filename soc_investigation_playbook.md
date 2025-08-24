@@ -2,6 +2,8 @@
 
 This playbook provides a structured, end-to-end guide for investigating suspicious or compromised systems (Windows and Linux). It is optimized for Tier 1/2 analysts working in on-premise environments and prioritizes real-world threats: ransomware, phishing, persistence, C2, and account compromise.
 
+> 🧭 **MITRE ATT\&CK Mapping:** Relevant techniques are listed under each section using their technique IDs (e.g., T1059.001). Refer to [https://attack.mitre.org/](https://attack.mitre.org/) for detailed descriptions.
+
 ---
 
 ## 🚨 1. Initial Alert Context
@@ -12,9 +14,11 @@ This playbook provides a structured, end-to-end guide for investigating suspicio
 * Correlate with EDR/SIEM if available.
 * Document alert metadata for timeline reconstruction.
 
+**MITRE ATT\&CK:** T1082, T1598, T1566.001
+
 ---
 
-## 🧹 2. Running Process Analysis
+## 🧩 2. Running Process Analysis
 
 **Windows:**
 
@@ -34,6 +38,8 @@ ps -eo pid,ppid,user,cmd,%cpu,%mem --sort=-%cpu
 * Check parent-child relationships (`pstree`, `Process Explorer`).
 * Review binary path — system32 is normal, `AppData\Roaming` is not.
 * Hash binaries and scan with VirusTotal or Hybrid Analysis.
+
+**MITRE ATT\&CK:** T1057, T1059.001, T1087.001, T1543
 
 ---
 
@@ -58,6 +64,8 @@ lsof -i
 * Correlate PIDs with processes (`netstat` → `tasklist`).
 * Query suspicious IPs in AbuseIPDB or ThreatFox.
 
+**MITRE ATT\&CK:** T1049, T1071.001, T1105, T1016
+
 ---
 
 ## 📜 4. Logs & Authentication Review
@@ -81,6 +89,8 @@ cat /var/log/syslog
 * Check if logs were tampered (e.g., Event ID 1102).
 * Confirm what happened before/after alert time.
 
+**MITRE ATT\&CK:** T1110.001, T1078, T1086, T1003, T1562.002
+
 ---
 
 ## 🧠 5. Persistence Checks
@@ -101,6 +111,8 @@ systemctl list-units --type=service
 
 * Look for auto-start scripts in temp directories or hidden folders.
 * Flag any service or cron job referencing a suspicious script or path.
+
+**MITRE ATT\&CK:** T1053.005, T1547.001, T1543.003
 
 ---
 
@@ -124,6 +136,8 @@ sudo less /var/log/secure
 * Flag accounts with unexpected admin rights.
 * Check login activity for abuse or credential reuse.
 
+**MITRE ATT\&CK:** T1078, T1136.001, T1098
+
 ---
 
 ## 🔗 7. Lateral Movement & Remote Access Indicators
@@ -131,6 +145,8 @@ sudo less /var/log/secure
 * Look for RDP (Logon Type 10), SMB sessions, or SSH from strange sources.
 * Inspect scheduled tasks pushing to other hosts.
 * Use `quser`, `query session`, or `last` to view user sessions.
+
+**MITRE ATT\&CK:** T1021.001, T1021.002, T1021.004
 
 ---
 
@@ -145,6 +161,8 @@ sudo less /var/log/secure
   * Process command lines for obfuscation
   * Domains against [AbuseIPDB](https://www.abuseipdb.com/)
 
+**MITRE ATT\&CK:** T1204.002, T1065, T1105
+
 ---
 
 ## 🛡️ 9. Containment Actions (Tier 1/2)
@@ -155,9 +173,11 @@ sudo less /var/log/secure
 * Force password resets for compromised accounts.
 * Trigger IR escalation per SOP if needed.
 
+**MITRE ATT\&CK:** T1562.001, T1550, T1566, T1033
+
 ---
 
-## 📟 10. Document & Report
+## 🧾 10. Document & Report
 
 * Record:
 
