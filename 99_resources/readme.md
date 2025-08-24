@@ -4,6 +4,23 @@ This page provides categorized quick-access links to useful blue team tools, doc
 
 ---
 
+# 🧠 Tier 1/2 SOC Analyst Investigation Playbook
+
+Comprehensive, threat-driven checklist for investigating suspicious or compromised Windows and Linux systems on-prem. Covers:
+
+- Process inspection and service triage  
+- Live network connection analysis  
+- Log correlation and authentication forensics  
+- Persistence detection (scheduled tasks, cron, autoruns)  
+- Account misuse, IOCs, and alert-driven triage  
+- Ransomware, phishing, credential access, and more
+
+📌 **Use this as your primary framework for structured incident response.**
+
+→ [View Full Playbook](LINK_TO_FINAL_LOCATION)  
+
+---
+
 ## 🔬 File and Malware Analysis
 
 * [VirusTotal](https://www.virustotal.com/gui/) – File, domain, and hash scanning  
