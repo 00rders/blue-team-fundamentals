@@ -102,4 +102,4 @@
 ## 📦 Resources
 * [Index](99_resources/readme.md)
 * [Universal Prompt](universal_prompt.md)
-* [Linux Log Investigation]()
+* [Linux Log Investigation](linux_log_investigation.md)
